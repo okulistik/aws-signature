@@ -1,0 +1,25 @@
+{
+  "name": "okulistik/aws-signature",
+  "description": "Aws signature for lite version.",
+  "homepage": "https://github.com/okulistik/AwsSignatureLite",
+  "type": "library",
+  "license": "MIT",
+  "authors":      [
+    {
+      "name":      "Halil ULU",
+      "email":     "halil.ulu@teknolist.com",
+      "homepage":  "https://github.com/halil-ulu"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AwsSignature\\": "src/AwsSignature"
+    }
+  }
+}
