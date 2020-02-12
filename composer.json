@@ -1,7 +1,7 @@
 {
   "name": "okulistik/aws-signature",
-  "description": "Aws signature for lite version.",
-  "homepage": "https://github.com/okulistik/AwsSignatureLite",
+  "description": "Amazon’s Restful infrastructure and get access to files at the Bucket.",
+  "homepage": "https://github.com/okulistik/aws-signature",
   "type": "library",
   "license": "MIT",
   "authors":      [
