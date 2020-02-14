@@ -12,5 +12,5 @@ Aws-signature library sends requests that are compatible with Amazon’s Restful
 ## Tests
 
 * mv tests/template-env.in tests/env.ini
-* kendi inilerini yaz 
+* Fill in the fields
 * vendor/bin/phpunit tests git log
