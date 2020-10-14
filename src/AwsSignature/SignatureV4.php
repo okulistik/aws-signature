@@ -21,27 +21,27 @@ class SignatureV4 implements SignatureInterface
     private function getHeaderBlacklist()
     {
         return [
-            'cache-control' => true,
-            'content-length' => true,
-            'expect' => true,
-            'max-forwards' => true,
-            'pragma' => true,
-            'range' => true,
-            'te' => true,
-            'if-match' => true,
-            'if-none-match' => true,
-            'if-modified-since' => true,
-            'if-unmodified-since' => true,
-            'if-range' => true,
-            'accept' => true,
-            'authorization' => true,
-            'proxy-authorization' => true,
-            'from' => true,
-            'referer' => true,
-            'user-agent' => true,
-            'x-amzn-trace-id' => true,
+            'cache-control'         => true,
+            'content-length'        => true,
+            'expect'                => true,
+            'max-forwards'          => true,
+            'pragma'                => true,
+            'range'                 => true,
+            'te'                    => true,
+            'if-match'              => true,
+            'if-none-match'         => true,
+            'if-modified-since'     => true,
+            'if-unmodified-since'   => true,
+            'if-range'              => true,
+            'accept'                => true,
+            'authorization'         => true,
+            'proxy-authorization'   => true,
+            'from'                  => true,
+            'referer'               => true,
+            'user-agent'            => true,
+            'x-amzn-trace-id'       => true,
             'aws-sdk-invocation-id' => true,
-            'aws-sdk-retry' => true,
+            'aws-sdk-retry'         => true,
         ];
     }
 
@@ -51,7 +51,7 @@ class SignatureV4 implements SignatureInterface
         $parseRequest = $this->parseRequest($request);
         $payload = $this->getPayload($request);
 
-        $largeDateTime = date(self::ISO8601_BASIC);
+        $largeDateTime = gmdate(self::ISO8601_BASIC);
         $shortDateTime = substr($largeDateTime, 0, 8);
 
         $scope = $this->createScope($shortDateTime, $credentials['region'], $credentials['service']);

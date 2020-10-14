@@ -31,7 +31,7 @@ class S3SignatureV4Test extends \PHPUnit_Framework_TestCase
         ];
 
         $expires = strtotime(date(self::ISO8601)) + $expiresTime;
-        $expires = date(self::ISO8601, $expires);
+        $expires = gmdate(self::ISO8601, $expires);
 
         $sing = new S3SignatureV4();
 
